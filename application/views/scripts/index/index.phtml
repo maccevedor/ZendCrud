@@ -1,0 +1,10 @@
+<h3>Animals:</h3>
+<p>
+<?php foreach ( $this->animals as $animal ): ?>
+<?php echo $animal['name'].""; ?> 
+<a href="<?php echo $this->url(array('controller'=>'index','action'=>'edit','id'=>$animal['id'])) ?>"> edit </a>
+<a href="<?php echo $this->url(array('controller'=>'index','action'=>'delete','id'=>$animal['id'])) ?>"> delete </a>
+<br/>
+<?php endforeach;?> 
+</p>
+<a href="<?php echo $this->url(array('controller'=>'index','action'=>'showform')) ?>">add new animal</a>
